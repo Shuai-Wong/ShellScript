@@ -1,7 +1,7 @@
 #!/bin/bash
 # OPERATION DARK TRANSIT: Quantum-Secure Data Exfiltration
 # v2.1 - Lazarus Group Edition
-# Runtime: ~15 minutes (900 seconds)
+# Runtime: ~20 minutes (1200 seconds)
 
 echo -e "\e[32m[+] Initializing Operation Dark Transit\e[0m"
 echo -e "\e[31m[!] Evading Network Perimeter Defenses\e[0m"
@@ -9,9 +9,9 @@ START=$(date +%s)
 
 # Phase 1: Quantum-Resistant Encryption
 echo -e "\e[34m[*] Applying CRYSTALS-Kyber Post-Quantum Encryption\e[0m"
-for part in {1..40}; do
+for part in {1..50}; do
   echo "  - Encrypting chunk_${part}.dat with NIST PQC algorithm"
-  sleep 5
+  sleep 4
 done
 
 # Phase 2: Darknet Routing
@@ -21,10 +21,10 @@ echo "[*] [SCP] Quantum Tunnel Endpoint: $DEST"
 echo "[*] Routing via: Tor → I2P → Freenet → LokiNet"
 
 # Phase 3: Packetized Transmission
-for part in {1..40}; do
+for part in {1..50}; do
   echo -e "[SCP] Transmitting chunk_${part}.qenc through darknet layers"
-  for pkt in {1..15}; do
-    printf "   • Packet %02d/15 | Routing: Tor→I2P→LokiNet\r" "$pkt"
+  for pkt in {1..12}; do
+    printf "   • Packet %02d/12 | Routing: Tor→I2P→LokiNet\r" "$pkt"
     sleep 5
   done
   echo -e "\n[✓] chunk_${part}.qenc transmitted | Darknet confirmed"
@@ -33,22 +33,22 @@ done
 
 # Phase 4: Blockchain Verification
 echo -e "\e[35m[*] Validating Transmission via Smart Contract\e[0m"
-for v in {1..20}; do
-  echo "  - Confirming Ethereum transaction $v/20 | Gas: 55 Gwei"
-  sleep 6
+for v in {1..25}; do
+  echo "  - Confirming Ethereum transaction $v/25 | Gas: 55 Gwei"
+  sleep 5
 done
 
 # Phase 5: Anti-Forensic Cleanup
 echo -e "\e[36m[!] Erasing Digital Footprints\e[0m"
 echo "[sudo] rm -f /var/log/auth.log*"
-for a in {1..10}; do
-  echo "  - Wiping forensic artifacts $a/10 | NSA-approved sanitization"
-  sleep 5
+for a in {1..15}; do
+  echo "  - Wiping forensic artifacts $a/15 | NSA-approved sanitization"
+  sleep 4
 done
 
 END=$(date +%s)
 ELAPSED=$((END - START))
 MINS=$((ELAPSED / 60))
 echo -e "\e[32m[+] Operation Completed: $ELAPSED seconds ($MINS minutes)\e[0m"
-echo -e "\e[34m[!] 1.4TB transmitted | Quantum-secure | Darknet verified\e[0m"
+echo -e "\e[34m[!] 2.8TB transmitted | Quantum-secure | Darknet verified\e[0m"
 echo -e "\e[41mWARNING: UNDETECTED EXFILTRATION CONFIRMED\e[0m"
