@@ -11,34 +11,34 @@ START=$(date +%s)
 echo -e "\e[34m[*] Enumerating Sensitive Data Repositories\e[0m"
 for i in {1..30}; do
   echo "  - Mapping data source $i/30 | Evading SIEM detection"
-  sleep 5
+  sleep 9
 done
 
 # Phase 2: Stealth Download Operation
 echo -e "\e[33m[+] Establishing TLS 1.3 Tunnels (CVE-2024-3197)\e[0m"
-for idx in {1..50}; do
+for idx in {1..10}; do
   echo -e "[WGET] Fetching archive_part${idx}.tar.gz via onion routing"
-  for chunk in {1..20}; do
-    printf "  → Transmitting chunk %02d/20 | Obfuscated stream\r" "$chunk"
-    sleep 5
+  for chunk in {1..5}; do
+    printf "  → Transmitting chunk %02d/5 | Obfuscated stream\r" "$chunk"
+    sleep 9
   done
-  echo -e "\n[✓] Archive part ${idx}/50 exfiltrated | SHA3-256 verified"
+  echo -e "\n[✓] Archive part ${idx}/10 exfiltrated | SHA3-256 verified"
   sleep 3
 done
 
 # Phase 3: Blockchain Verification
 echo -e "\e[35m[*] Anchoring Data Integrity to Ethereum Blockchain\e[0m"
-for v in {1..20}; do
-  echo "  - Confirming block $v/20 | Gas: 37 Gwei"
-  sleep 6
+for v in {1..10}; do
+  echo "  - Confirming block $v/10 | Gas: 37 Gwei"
+  sleep 9
 done
 
 # Phase 4: Anti-Forensics
 echo -e "\e[36m[!] Deploying Counter-Forensic Measures\e[0m"
 echo "[sudo] shred -u /var/log/nginx/access.log*"
-for a in {1..15}; do
-  echo "  - Overwriting log artifacts $a/15 | Gutmann method"
-  sleep 5
+for a in {1..5}; do
+  echo "  - Overwriting log artifacts $a/5 | Gutmann method"
+  sleep 9
 done
 
 END=$(date +%s)
